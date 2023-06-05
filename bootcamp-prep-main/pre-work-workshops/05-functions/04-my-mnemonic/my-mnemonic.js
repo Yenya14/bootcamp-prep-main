@@ -13,3 +13,17 @@ function myMnemonic(word1, word2, word3, word4) {
     
     return mnemonic;
   }
+
+  
+// function myMnemonic(word1, word2, word3, word4) {
+//     let mnemonic = '';
+    
+//     for (let i = 0; i < arguments.length; i++) {
+//       let word = arguments[i];
+//       if (word !== undefined) {
+//         mnemonic += word.charAt(0);
+//       }
+//     }
+    
+//     return mnemonic;
+//   }
