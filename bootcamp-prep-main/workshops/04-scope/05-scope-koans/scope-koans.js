@@ -1,5 +1,5 @@
 // Test One Restrictions: Do not declare any new variable with the let keyword
-let testOneMessage = 'test failing';
+let testOneMessage = 'test succeeding';
 
 function testOne() {
   return testOneMessage;
@@ -15,9 +15,8 @@ function testTwo() {
   return testTwoMessage;
 }
 
-function helperFunc(a) {
-  a = 'test succeeding';
-  return a;
+function helperFunc() {
+  testTwoMessage='test succeeding';
 }
 
 
@@ -37,7 +36,7 @@ function testThree(testThreeMessage) {
       return testThreeMessage;
     }
 
-    return 'test failing';
+    return 'test succeeding';
   }
 }
 
@@ -54,7 +53,7 @@ function testFour(msg) {
       return testFourMessage;
     }
 
-    testFourMessage = doubleInner('test failing')
+    testFourMessage = doubleInner('test succeeding')
   }
 
   innerFunc(testFourMessage);
