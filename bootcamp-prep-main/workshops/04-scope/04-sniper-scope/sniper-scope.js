@@ -1,3 +1,4 @@
+debugger;
 let bond = '007';
 
 function oddJob() {
@@ -56,3 +57,9 @@ function elChiffre() {
 
   return AgentinScope === prediction;
 }
+oddJob()
+goldFinger()
+scaramanga()
+drNo()
+jaws()
+elChiffre()
