@@ -32,11 +32,11 @@ function testThree(testThreeMessage) {
   return msg;
 
   function getMessage(value) {
-    if (value) {
+    if (!value) {
       return testThreeMessage;
     }
 
-    return 'test succeeding';
+    return 'test failing';
   }
 }
 
@@ -48,12 +48,12 @@ function testFour(msg) {
   function innerFunc(msg) {
     msg = msg
 
-    function doubleInner(msg) {
+    function doubleInner(ms) {
       testFourMessage = msg;
       return testFourMessage;
     }
 
-    testFourMessage = doubleInner('test succeeding')
+    testFourMessage = doubleInner('test failing')
   }
 
   innerFunc(testFourMessage);
