@@ -38,3 +38,18 @@ let animalNoises = [
 ];
 
 // YOUR CODE BELOW
+
+function petSounds(animal, country){
+  for (i=0; i< animalNoises.length; i++) {
+    let currentAnimal = animalNoises[i];
+    
+    let currentNoises = currentAnimal[animal];
+    
+    if (currentNoises) {
+      let newAnimal=animal[0].toUpperCase();
+      let lowerCasedAnimal=animal.slice(1).toLowerCase();
+      let newCountry=currentNoises[country];
+      return `${newAnimal}${lowerCasedAnimal}s in ${country} say ${newCountry}`
+    }
+  }
+}

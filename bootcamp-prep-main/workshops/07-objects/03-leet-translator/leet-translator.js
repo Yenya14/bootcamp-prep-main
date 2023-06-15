@@ -2,3 +2,43 @@ let letters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 let leetChars = ['@', '8', '(', '|)', '3', 'ph', 'g', '#','l', '_|', '|<', '1', "|'|'|", '/\/', '0', '|D', '(,)', '|2', '5', '+', '|_|', '|/', "|/|/'",'><', 'j', '2'];
 
 // YOUR CODE BELOW
+
+function leetTranslator(string) {
+    let leetDic = {};
+    let result = '';
+    
+    for (let i = 0; i < letters.length; i++) {
+      let currentLetter = letters[i];
+      let currentLeetChar = leetChars[i];
+     
+      leetDic[currentLetter] = currentLeetChar;
+    }
+    
+    for (let j = 0; j < string.length; j++) {
+      let currentStringChar = string[j].toLowerCase();
+      result += leetDic[currentStringChar];
+    }
+    return result;
+  }
+
+  
+// const leetTranslator = (string) => {
+//     const leetDict = {};
+    
+//     for (let i = 0; i <= letters.length - 1; i++) {
+//       const currentLetter = letters[i];
+//       const currentLeet = leetChars[i];
+//       leetDict[currentLetter] = currentLeet;
+//     };
+    
+//      let translatedString = '';
+      
+//       for (let i = 0; i < string.length; i++) {
+//         const currentCharacter = string[i].toLowerCase();
+        
+//         translatedString += leetDict[currentCharacter];
+//       };
+    
+//     return translatedString;
+//   };      
+    
